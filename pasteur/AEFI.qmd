@@ -1,0 +1,274 @@
+---
+title: "Tổng quan y văn về sự kiện bất lợi sau tiêm chủng tại Việt Nam"
+author: Phạm Nguyễn Thế Nguyên, Đinh Văn Ngôn, Trần Phạm Thanh Ngân, Nguyễn Thị Bích Ngân, Lê Thị Huyền Nhi, Mai Nguyễn Phương Nhi
+format:
+  revealjs:
+    theme: default
+    preview-links: auto
+editor: visual
+width: 1500
+height: 800
+fig-align: center
+---
+
+## Mục tiêu tổng quan
+
+- Mục tiêu tổng quan: Xác định các y văn có báo cáo về các sự kiện bất lợi sau tiêm chủng tại Việt Nam từ năm 2017 đến năm 2023
+
+- PICO 
+
+P(population): dân số Việt Nam
+
+I(intervention): được tiêm các loại vaccine
+
+C(control): 
+
+O(outcome): sự kiện bất lợi sau tiêm chủng 
+
+## Thuật ngữ tìm kiếm (search term)
+
+| PICO | Nội dung | Từ khóa | 
+|:---|:---------|:------------------|
+|P|Dân số Việt Nam|Vietnam OR Vietnamese|
+|I|Tiêm vaccine|Vaccine OR vaccination OR immunization|
+|O|sự kiện bất lợi sau tiêm chủng |AEFI OR "adverse events following immunization" OR "side effect"|
+|||(Vietnam OR Vietnamese) AND (Vaccine OR vaccination OR immunization) OR (AEFI OR adverse events following immunization OR side effect OR safety)|
+
+## Kết quả tìm kiếm trên các cơ sở dữ liệu
+
+| Cơ sở dữ liệu | Thuật ngữ tìm kiếm | Kết quả (1/12/2023)| 
+|:---|:------------------|:--------|
+|Pubmed|(((Vietnam[Title]) OR (Vietnamese[Title])) AND (Vaccine OR vaccination OR immunization) AND (AEFI OR adverse events following immunization OR side effect OR safety))|57 (result by year 2017-2023)|
+|Google Scholar|(phản ứng bất lợi sau tiêm or sự kiện bất lợi sau tiêm chủng) and (vắc xin or vắc-xin)|246 (custom range 2017-2023)|
+|Cochrane Library|(adverse events following immunization OR AEFI) AND Vietnam|8 trials (custom range 2017-2023)|
+|Tổng cộng||328|
+
+##
+
+![](pubmed.png){fig-align="center"}
+
+##
+
+![](gg.png){fig-align="center"}
+
+##
+
+![](cochrane.png){fig-align="center"}
+
+
+
+## Tiêu chí nhận vào và loại ra
+
+Tiêu chí nhận vào:
+
+- Các nghiên cứu tổng quan, thử nghiệm lâm sàng, báo cáo một ca, hàng loạt ca về sự kiện bất lợi sau tiêm chủng lại Việt Nam 
+
+- Các nghiên cứu dùng ngôn ngữ tiếng anh và tiếng việt
+
+Tiêu chí loại ra 
+
+- Các nghiên cứu không tiếp cận được toàn văn
+
+## Kết quả tổng quan 
+
+```{r,message = FALSE,echo = FALSE,result=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+data <- data.frame(
+  type = c("COVID-19","A/H5N1 Influenza","HPV","VNNB","ROTAVIRUS","DENGUE","A/H1N1 Influenza","NMC"),
+  num = c(10,3,1,1,2,1,1,1)
+)
+ggplot(data, aes(x = type, y = num)) +
+  geom_bar(stat = "identity") +
+  geom_text(size = 3, position = position_stack(vjust = 0.5), col = "white",label = paste0(data$num))+labs(x = "Vaccine type", y = "Number of publications")
+```
+
+Biểu đồ 1: Số lượng nghiên cứu được chọn sau khi đọc tiêu đề và tóm tắt 
+
+## Vaccine COVID-19
+
+Bảng 1: Các thông tin của các nghiên cứu về vaccine COVID-19
+
+|STT|Thời gian nghiên cứu|Địa điểm | Thiết kế nghiên cứu | Cỡ mẫu nghiên cứu|Loại vaccine| 
+|:-|:-------|:-----|:--------|:--------|:---|
+|1|2021|Hà Nội| Cắt ngang mô tả|813| Pfizer|
+|2|2021|Cần Thơ|Cắt ngang mô tả|322|AstraZeneca|
+|3|2022|Hà Nội|Cắt ngang mô tả|721|Pfizer|
+|4|2021|Tp.HCM|Cắt ngang mô tả|312|Vaxzevri|
+|5|2021|Việt Nam|Cắt ngang mô tả|1028| AZD1222|
+|6|2021|Hà Nội|Báo cáo 2 ca|2|AstraZeneca|
+
+## Vaccine COVID-19
+
+Bảng 1: Các thông tin của các nghiên cứu về vaccine COVID-19
+
+|STT|Thời gian nghiên cứu|Địa điểm | Thiết kế nghiên cứu | Cỡ mẫu nghiên cứu|Loại vaccine| 
+|:-|:-------|:-----|:--------|:--------|:---|
+|7|2021|Hà Nội|Cắt ngang mô tả|719|AstraZeneca Moderna Pfizer|
+|8|2021|Tp.HCM|Hồi cứu|4341|AstraZeneca VeroCell Moderna|
+
+
+## Vaccine COVID-19
+
+Bảng 2: Các thông tin của các nghiên cứu về vaccine COVID-19
+
+|STT|Thời gian nghiên cứu|Địa điểm | Thiết kế nghiên cứu | Cỡ mẫu nghiên cứu|Loại vaccine| 
+|:-|:-------|:-----|:--------|:--------|:---|
+|9|2021|Thái Bình|Cắt ngang mô tả|1322|Pfizer Moderna AstraZeneca Sinopharm Sputnik v|
+
+## Các sự kiện bất lợi sau khi tiêm vaccine COVID- 19
+
+
++-------------------------+-----------------+--------------------+
+| Triệu chứng             | STT             |Số lượng nghiên cứu |
++=========================+=================+====================+
+| - Đau tại chổ tiêm      | 1,2,3,4,5,7,8,9 | 8 nghiên cứu       |
+| - Sốt > 37.5 độ         |                 |                    |
++-------------------------+-----------------+--------------------+
+| - Nôn, buồn nôn         |- 1,2,3,4,5,8,9  | 7 nghiên cứu       |
+| - Tiêu chảy             |- 1,2,3,4,5,8,9  |                    |
++-------------------------+-----------------+--------------------+
+| - Mệt mỏi               |- 1,2,3,5,8,9    | 6 nghiên cứu       |
+| - Dị ứng ngoài da: ngứa |- 1,2,3,4,5,8    |                    |
++-------------------------+-----------------+--------------------+
+
+: Các triệu chứng sau khi tiêm được báo cáo trong các nghiên cứu.
+
+
+## Các sự kiện bất lợi sau khi tiêm vaccine COVID- 19
+
++-------------------------+-----------------+--------------------+
+| Triệu chứng             | STT             |Số lượng nghiên cứu |
++=========================+=================+====================+
+| - Đau đầu               |- 2,5,7,8,9      | 5 nghiên cứu       |
+| - Đau vai, đau cơ       |- 2,5,7,8,9      |                    |
++-------------------------+-----------------+--------------------+
+| - Sỗ mũi                |- 1,3,4,5        | 4 nghiên cứu       |
+| - Thở nhanh             |- 1,3,4,5        |                    |
++-------------------------+-----------------+--------------------+
+| - Viêm khớp             |- 4,8,9          | 3 nghiên cứu       |
++-------------------------+-----------------+--------------------+
+
+: Các triệu chứng sau khi tiêm được báo cáo trong các nghiên cứu.
+
+
+## Các sự kiện bất lợi sau khi tiêm vaccine COVID- 19
+
++-------------------------+-----------------+--------------------+
+| Triệu chứng             | STT             |Số lượng nghiên cứu |
++=========================+=================+====================+
+| - Ớn lạnh               |- 5,8            | 2 nghiên cứu       |
+| - Tê cánh tay           |- 2,4            |                    |
+| - Bệnh hạch bạch huyết  |- 4,9            |                    |
+| - Phù: cơ, mi mắt       |- 3,5            |                    |
++-------------------------+-----------------+--------------------+
+
+## Các sự kiện bất lợi sau khi tiêm vaccine COVID- 19
+
+
++---------------------------------+-------+--------------------+
+| Triệu chứng                     |STT    |Số lượng nghiên cứu |
++=================================+=======+====================+
+| - Áp xe, mụn nhọt               |- 4    |                    |
+| - Phát ban, viêm da             |- 4    |                    |
+| - Giảm trương lực cơ            |- 4    |                    |
+| - Mất khướu giác, vị giác       |- 4    |                    |
+| - Lồng ruột                     |- 4    |                    |
+| - Tăng huyết áp, hạ huyết áp    |- 5    |                    |
+| - Ngất xỉu                      |- 8    |                    |
+| - Cần sự chăm sóc y tế          |- 9    |  1 nghiên cứu      |
++---------------------------------+-------+--------------------+
+
+: Các triệu chứng sau khi tiêm được báo cáo trong các nghiên cứu.
+
+# Guillain-Barré syndrome after COVID-19 vaccination: report of two cases from Vietnam {style="text-align: center"}
+
+## Ca 1
+
+**Bệnh sử:**
+
+- Bệnh nhân nam 38 tuổi không có tiền sử bệnh lý liên quan đến Bệnh viện Trung ương Quân đội 108
+
+- Trong tình trạng tê và yếu tứ chi **bốn** ngày sau khi tiêm vaccine ChAdOx1 nCoV-19 (Oxford-AstraZeneca) mũi 1
+
+- Sau đó lông mày chảy xệ hai bên, không nhắm mắt được, mất thăng bằng
+
+**Tiền căn:**
+
+- chưa từng tiếp xúc với người mắc virus Corona 2 (SARS-CoV-2) trước đó
+
+## Ca 1
+
+**Khám lâm sàng:**
+
+- Thần kinh: 
+
+  - Yếu hai bên mặt
+  
+  - Giảm sức mạnh vận động ở tứ chi (4/5)
+  
+**Cận lâm sàng:**
+
+- Công thức máu:
+
+  - Số lượng bạch cầu (WBC) là 13,53 G/L (59,7% bạch cầu trung tính và 29,3% lympho)
+  
+- Dịch não tủy:
+
+  - Có sự phân ly tế bào albumin với hàm lượng protein là 1,94 g/L và hàm lượng bạch cầu là 4 tế bào/mL
+  
+## Ca 1  
+  
+**Điều trị:**
+
+- Truyền huyết tương 5 lần
+
+- Xuất viện sau 17 ngày điều trị
+
+
+## Ca 2
+
+**Bệnh sử:**
+
+- Bệnh nhân nam 29 tuổi đến Bệnh viện Trung ương Quân đội 108 trong tình trạng yếu tứ chi sau khi tiêm liều thứ hai vắc xin ChAdOx1 nCoV-19 cách đây ba tuần
+
+**Tiền căn:**
+
+- chưa từng tiếp xúc với người mắc virus Corona 2 (SARS-CoV-2) trước đó
+
+## Ca 2
+
+**Khám lâm sàng:**
+
+- Thần kinh: 
+  
+  - Giảm sức mạnh vận động ở tứ chi (4/5)
+  
+  - Giảm phản xạ gân sâu và dị cảm ở cả hai tay và hai chân
+  
+**Cận lâm sàng:**
+
+- Công thức máu:
+
+  - Bình thường
+  
+- Dịch não tủy:
+
+  - Có sự phân ly tế bào albumin với protein 4,0 g/L và không có tăng bạch cầu hạt
+  
+## Ca 2  
+  
+**Điều trị:**
+
+- Truyền huyết tương 5 lần
+
+- Xuất viện sau 11 ngày điều trị
+
+## Hạn chế
+
+- Chưa tổng quan được các sự kiện bất lợi sau tiêm chủng theo loại vaccine được tiêm
+
+- Chưa tổng quan được các sự kiện bất lợi sau tiêm chúng theo số mũi tiêm
+
+# Xin cám ơn{style="text-align: center"}
